@@ -17,6 +17,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    UILabel *titleLabel=[[UILabel alloc]initWithFrame:CGRectMake(10, 100, 100, 30)];
+    [self.view addSubview:titleLabel];
+    NSString *title=@"账户名：";
+    NSMutableAttributedString* attrStr = [[NSMutableAttributedString alloc] initWithString:title];
+    [attrStr addAttribute:NSKernAttributeName value:@(9.0) range:NSMakeRange(0, attrStr.length-2)];
+    titleLabel.attributedText = attrStr;
+    
+    UILabel *subLabel=[[UILabel alloc]initWithFrame:CGRectMake(10, 150, 120, 30)];
+    [self.view addSubview:subLabel];
+    NSString *subTitle=@"密码：";
+    NSMutableAttributedString* subAttrStr = [[NSMutableAttributedString alloc] initWithString:subTitle];
+    [subAttrStr addAttribute:NSKernAttributeName value:@(35.0) range:NSMakeRange(0, subTitle.length-2)];
+    subLabel.attributedText = subAttrStr;
+
 }
 
 - (void)didReceiveMemoryWarning {
